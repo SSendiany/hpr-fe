@@ -31,7 +31,7 @@ const Home = () => {
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <div className="flex items-center space-x-3">
-              <img className='w-25' src='/public/images/hpr_logo.png'/>
+              <img className='w-25' src='images/hpr_logo.png'/>
               {/* <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
                 <Truck className="w-6 h-6 text-white" />
               </div>
@@ -170,7 +170,7 @@ const Home = () => {
             </div>
             <div className="relative">
               <div className="bg-gradient-to-br from-yellow-300 to-orange-500 rounded-2xl p-8 shadow-2xl flex gap-5 items-center content-center">
-                <img className='w-50' src="/public/images/forklift.png" />
+                <img className='w-50' src="images/forklift.png" />
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-2">Innovation Driven</h3>
                   <p className="text-white/90">
@@ -304,7 +304,7 @@ const Home = () => {
       </div>
 
       {/* Board of Directors */}
-      <div id="leadership" className="backdrop-blur-sm py-16" style={{backgroundImage: "url('/public/images/bg_black2.png')"}}>
+      <div id="leadership" className="backdrop-blur-sm py-16" style={{backgroundImage: "url('images/bg_black2.png')"}}>
         <div className="max-w-6xl mx-auto px-6">
 
           <div className="flex items-center mb-12">
@@ -313,7 +313,7 @@ const Home = () => {
           </div>
           
             <div>
-              <img className='w-full' src='/public/images/board_structure.png'/>
+              <img className='w-full' src='images/board_structure.png'/>
             </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* {[
@@ -377,7 +377,7 @@ const Home = () => {
       {/* Footer */}
       <div className="bg-black backdrop-blur-sm py-8">
         <div className="max-w-6xl mx-auto px-6 text-center grid grid-cols-3">
-         <img className='w-25' src='/public/images/hpr_logo.png'/>
+         <img className='w-25' src='images/hpr_logo.png'/>
           <div className="text-white/70 text-sm">
             <p>NPWP : 1000 0000 0204 4156</p>
             <p>SK Kemenkumham : AHU-0035054.AH.01.01.TAHUN 2025</p>
