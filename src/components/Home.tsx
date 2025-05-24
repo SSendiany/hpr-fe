@@ -94,16 +94,16 @@ const Home = () => {
         
  <Carousel autoPlay={true} interval={5000}>
           {/* Slide 1 */}
-          <div className="flex items-center justify-center h-full">
+          <div className="flex items-center justify-center h-full" style={{backgroundImage: "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url('images/slide1.png')",backgroundSize: "cover", backgroundPosition: "bottom"}}>
             <div className="text-center text-white max-w-4xl mx-auto px-6">
-              <div className="mb-6">
+              {/* <div className="mb-6">
                 <Truck className="w-24 h-24 text-white drop-shadow-lg mx-auto" />
-              </div>
+              </div> */}
               <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-4">
                 <span className="text-sm font-semibold">Fast & Reliable</span>
               </div>
               <h1 className="text-5xl lg:text-7xl font-bold mb-4 drop-shadow-lg">
-                PT Harazaki Perkasa Rajawali
+                HPR LOGISTICS
               </h1>
               <p className="text-2xl lg:text-3xl font-light mb-6 drop-shadow-md">
                 Where Logistics Meets Greatness
@@ -111,7 +111,7 @@ const Home = () => {
               <p className="text-lg lg:text-xl mb-8 drop-shadow-sm max-w-2xl mx-auto">
                 Leading integrated logistics solutions across Indonesia
               </p>
-              <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+              <div className="hidden flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
                 <button className="bg-white text-orange-600 px-8 py-3 rounded-full font-bold text-lg hover:bg-orange-50 transition-all duration-200 hover:scale-105 shadow-lg">
                   Get Started
                 </button>
@@ -123,7 +123,7 @@ const Home = () => {
           </div>
 
           {/* Slide 2 */}
-          <div className="flex items-center justify-center h-full">
+          <div className="flex items-center justify-center h-full" style={{backgroundImage: "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url('images/transport-logistics-products.jpg')",backgroundSize: "cover", backgroundPosition: "top"}}>
             <div className="text-center text-white max-w-4xl mx-auto px-6">
               <div className="mb-6">
                 <Ship className="w-24 h-24 text-white drop-shadow-lg mx-auto" />
@@ -140,7 +140,7 @@ const Home = () => {
               <p className="text-lg lg:text-xl mb-8 drop-shadow-sm max-w-2xl mx-auto">
                 Comprehensive freight services connecting your business worldwide
               </p>
-              <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+              <div className="hidden  flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
                 <button className="bg-white text-orange-600 px-8 py-3 rounded-full font-bold text-lg hover:bg-orange-50 transition-all duration-200 hover:scale-105 shadow-lg">
                   Get Started
                 </button>
@@ -169,7 +169,7 @@ const Home = () => {
               </p>
             </div>
             <div className="relative">
-              <div className="bg-gradient-to-br from-yellow-300 to-orange-500 rounded-2xl p-8 shadow-2xl flex gap-5 items-center content-center">
+              <div className="bg-gradient-to-br from-yellow-300 to-orange-500 rounded-2xl p-8 shadow-2xl lg:flex gap-5 items-center content-center">
                 <img className='w-50' src="images/forklift.png" />
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-2">Innovation Driven</h3>
@@ -184,7 +184,7 @@ const Home = () => {
       </div>
 
       {/* Vision & Mission */}
-      <div className="py-16">
+      <div className="py-60 bg-black" style={{backgroundImage: "url('images/business-logistic.png')"}}>
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl">
@@ -268,14 +268,18 @@ const Home = () => {
       </div>
 
       {/* Why Choose Us */}
-      <div id="why-us" className="py-16">
+      <div id="why-us" className="py-16" style={{  backgroundImage: `
+linear-gradient(to right, rgba(250, 204, 21, 0.7), rgba(249, 115, 22, 0.7)),url('images/cargo.jpg')`,backgroundSize: "cover", backgroundPosition: "bottom"}}>
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4 drop-shadow-lg">Why Choose Us</h2>
+            <div className="flex items-center justify-center mb-4">
+              <div className="w-2 h-10 bg-yellow-400 mr-4"></div>
+              <h2 className="text-4xl font-bold text-white drop-shadow-lg">Why Choose Us</h2>
+            </div>
             <p className="text-xl text-white/90 drop-shadow-md">Excellence in every aspect of logistics</p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 mt-24 gap-6">
             {[
               {
                 title: "Integrated & Reliable",
@@ -304,11 +308,11 @@ const Home = () => {
       </div>
 
       {/* Board of Directors */}
-      <div id="leadership" className="backdrop-blur-sm py-16" style={{backgroundImage: "url('images/bg_black2.png')"}}>
+      <div id="leadership" className="backdrop-blur-sm py-16" style={{backgroundImage: "linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)),url('images/bg_black3.png')"}}>
         <div className="max-w-6xl mx-auto px-6">
 
           <div className="flex items-center mb-12">
-            <div className="w-2 h-10 bg-orange-500 mr-4"></div>
+            <div className="w-2 h-10 bg-yellow-400 mr-4"></div>
             <h2 className="text-4xl font-bold text-white">Board of Directors</h2>
           </div>
           
@@ -337,7 +341,7 @@ const Home = () => {
       </div>
 
       {/* Contact Section */}
-      <div id="contact" className="py-16">
+      <div id="contact" className="py-16" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.8)), url('images/sosmed.png')", backgroundSize:"cover"}}>
         <div className="max-w-5xl mx-auto px-6">
           <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-2xl">
             <div className="text-center mb-8">
@@ -375,10 +379,10 @@ const Home = () => {
       </div>
 
       {/* Footer */}
-      <div className="bg-black backdrop-blur-sm py-8">
-        <div className="max-w-6xl mx-auto px-6 text-center grid grid-cols-3">
-         <img className='w-25' src='images/hpr_logo.png'/>
-          <div className="text-white/70 text-sm">
+      <div className="bg-white backdrop-blur-sm py-8">
+        <div className="max-w-6xl mx-auto px-6 text-center items-center grid md:grid-cols-3">
+         <img className='w-25 md:mx-0 mx-auto md:mb-0 mb-5' src='images/hpr_logo.png'/>
+          <div className="text-black text-sm">
             <p>NPWP : 1000 0000 0204 4156</p>
             <p>SK Kemenkumham : AHU-0035054.AH.01.01.TAHUN 2025</p>
             <p>Fully Licensed & Certified</p>

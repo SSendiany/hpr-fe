@@ -46,7 +46,7 @@ const Carousel = ({ children, autoPlay = true, interval = 5000 }: CarouselProps)
 
   return (
     <div 
-      className="relative h-[600px] overflow-hidden"
+      className="relative h-[800px] overflow-hidden"
       onMouseEnter={() => setIsPlaying(false)}
       onMouseLeave={() => setIsPlaying(autoPlay)}
     >
