@@ -5,8 +5,6 @@ import { motion, useInView, useAnimation } from 'framer-motion';
 import Carousel from './Carousel';
 
 const Home = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [currentSlide, setCurrentSlide] = useState(0);
   const controls = useAnimation();
   
   // Refs for each section
@@ -58,21 +56,8 @@ const Home = () => {
     });
   }, [isInView, controls]);
 
-  const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Why Choose Us', href: '#why-us' },
-    { name: 'Leadership', href: '#leadership' },
-  ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-    setIsMenuOpen(false);
-  };
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-300 to-orange-500">
@@ -84,78 +69,11 @@ const Home = () => {
           </svg>
       </a>
 
-      {/* Navigation Bar */}
-      <motion.nav 
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-        className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg z-50"
-      >
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex justify-between items-center py-4">
-            {/* Logo */}
-            <div className="flex items-center space-x-3">
-              <img className='md:w-25 w-[20%]' src='images/hpr_logo.png'/>
-              {/* <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
-                <Truck className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-gray-800">HPR Logistik</h1>
-                <p className="text-xs text-gray-600">Where Logistics Meets Greatness</p>
-              </div> */}
-            </div>
-
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
-              {navItems.map((item) => (
-                <button
-                  key={item.name}
-                  onClick={() => scrollToSection(item.href)}
-                  className="text-gray-700 hover:text-orange-600 font-medium transition-colors duration-200 hover:scale-105"
-                >
-                  {item.name}
-                </button>
-              ))}
-              <button onClick={() => scrollToSection("#contact")} className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-6 py-2 rounded-full font-medium hover:shadow-lg transition-all duration-200 hover:scale-105">
-                 Contact Us
-              </button>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden p-2 rounded-md text-gray-700"
-            >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-
-          {/* Mobile Navigation */}
-          {isMenuOpen && (
-            <div className="lg:hidden bg-white/95 backdrop-blur-md border-t">
-              <div className="py-4 space-y-4">
-                {navItems.map((item) => (
-                  <button
-                    key={item.name}
-                    onClick={() => scrollToSection(item.href)}
-                    className="block w-full text-left px-4 py-2 text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-md transition-colors"
-                  >
-                    {item.name}
-                  </button>
-                ))}
-                <button onClick={() => scrollToSection("#contact")} className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-md font-medium">
-                  Contact Us
-                </button>
-              </div>
-            </div>
-          )}
-        </div>
-      </motion.nav>
-
+ 
       {/* Hero Carousel Section */}
       <motion.div 
         id="home" 
-        className="relative overflow-hidden md:pt-20 pt-18"
+        className=""
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -242,17 +160,7 @@ const Home = () => {
                 We understand the critical role of logistics in supporting modern supply chains, and we're here to help businesses stay connected and grow across regions. Driven by the spirit of <b>"Where Logistics Meets Greatness"</b>, we don't just move goods—we create value.
               </p>
             </motion.div>
-            <motion.div variants={itemVariants} className="relative">
-              <div className="bg-gradient-to-br from-yellow-300 to-orange-500 rounded-2xl p-8 shadow-2xl lg:flex gap-5 items-center content-center">
-                <img className='w-50' src="images/forklift.png" alt="Forklift" />
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Innovation Driven</h3>
-                  <p className="text-white/90">
-                    Through technology, operational excellence, and customer-oriented service, we aim to become a trusted partner in every journey.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
+            <motion.img variants={itemVariants} className='rounded-2xl w-full' src="images/hrp_group1.jpg" alt="Forklift" />
           </div>
       </motion.div>
         </div>
@@ -359,7 +267,7 @@ const Home = () => {
       <motion.div 
         ref={leadershipRef}
         id="why-us" 
-        className="py-16" 
+        className="py-20" 
         style={{  backgroundImage: `
 linear-gradient(to right, rgba(250, 204, 21, 0.7), rgba(249, 115, 22, 0.7)),url('images/cargo.jpg')`,backgroundSize: "cover", backgroundPosition: "bottom"}}
         variants={containerVariants}
@@ -404,23 +312,36 @@ linear-gradient(to right, rgba(250, 204, 21, 0.7), rgba(249, 115, 22, 0.7)),url(
       </motion.div>
 
       {/* Board of Directors */}
-      <motion.div 
+      <div 
         ref={contactRef}
         id="leadership" 
-        className="backdrop-blur-sm py-16" 
-        style={{backgroundImage: "linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)),url('images/bg_black3.png')"}}
-        variants={containerVariants}
-        initial="hidden"
-        animate={isInView.contact ? "visible" : "hidden"}
+        className="backdrop-blur-sm py-24" 
+        style={{
+          backgroundImage: `
+            linear-gradient(
+              to right bottom,
+              rgba(17, 24, 39, 0.85),
+              rgba(31, 41, 55, 0.85)
+            ),
+            url('images/hpr_group2.jpg')
+          `,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          position: "relative",
+          overflow: "hidden"
+        }}
       >
-        <div className="max-w-6xl mx-auto px-6">
+        <motion.div variants={containerVariants}
+        initial="hidden"
+        animate={isInView.contact ? "visible" : "hidden"} className="max-w-6xl mx-auto px-6">
 
-          <div className="flex items-center mb-12">
+          <div className="flex items-center mb-24">
             <div className="w-2 h-10 bg-yellow-400 mr-4"></div>
             <h2 className="text-4xl font-bold text-white">Board of Directors</h2>
           </div>
           
-            <div>
+            <div className="mt-10">
               <img className='w-full' src='images/board_structure.png'/>
             </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -441,8 +362,8 @@ linear-gradient(to right, rgba(250, 204, 21, 0.7), rgba(249, 115, 22, 0.7)),url(
               </motion.div>
             ))} */}
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
 
       {/* Our Legality */}
       <div 

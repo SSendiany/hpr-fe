@@ -1,3 +1,8 @@
+---
+import Navbar from "../components/Navbar";
+import "../styles/global.css";
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -8,6 +13,7 @@
 		<title>HPR LOGISTICS | Where Logistics Meets Greatness</title>
 	</head>
 	<body>
+		<Navbar client:load/>
 		<slot />
 	</body>
 </html>
