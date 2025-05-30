@@ -59,7 +59,7 @@ const Navbar = () => {
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <div className="flex items-center space-x-3">
-              <img className='md:w-25 w-[20%]' src='images/hpr_logo.png'/>
+              <img className='md:w-25 w-[20%]' src='/images/hpr_logo.png'/>
               {/* <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
                 <Truck className="w-6 h-6 text-white" />
               </div>
