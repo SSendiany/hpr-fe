@@ -23,11 +23,10 @@ const Gallery = ({ category = 'all' }: GalleryProps) => {
     // Logistics images
     { src: "/images/hprImg/1.jpg", alt: "HPR Team", title: "Logistics Operations", category: "company" },
     { src: "/images/hprImg/2.jpg", alt: "HPR Team", title: "Fleet Management", category: "company" },
-    { src: "/images/hprImg/7.jpg", alt: "HPR Team", title: "Warehouse Solutions", category: "company" },
+    { src: "/images/hprImg/6.jpg", alt: "HPR Team", title: "Warehouse Solutions", category: "company" },
     { src: "/images/hprImg/3.jpg", alt: "HPR Team", title: "Supply Chain", category: "company" },
     { src: "/images/hprImg/4.jpg", alt: "HPR Team", title: "Distribution Network", category: "company" },
     { src: "/images/hprImg/5.jpg", alt: "HPR Team", title: "Global Shipping", category: "company" },
-    { src: "/images/hprImg/6.jpg", alt: "HPR Team", title: "Last Mile Delivery", category: "company" },
   ];
 
   const filteredImages = activeCategory === 'all' 
