@@ -160,7 +160,7 @@ const Home = () => {
                 We understand the critical role of logistics in supporting modern supply chains, and we're here to help businesses stay connected and grow across regions. Driven by the spirit of <b>"Where Logistics Meets Greatness"</b>, we don't just move goods—we create value.
               </p>
             </motion.div>
-            <motion.img variants={itemVariants} className='rounded-2xl w-full' src="images/hrp_group1.jpg" alt="Forklift" />
+            <motion.img variants={itemVariants} className='rounded-2xl w-full' src="/images/hpr_group2.jpg" alt="hpr" />
           </div>
       </motion.div>
         </div>
@@ -169,7 +169,7 @@ const Home = () => {
       <div 
         ref={servicesRef}
         className="py-60 bg-black" 
-        style={{backgroundImage: "url('images/business-logistic.png')"}}
+        style={{backgroundImage: "url('/images/business-logistic.png')"}}
         
       >
         <motion.div variants={containerVariants}
@@ -323,7 +323,7 @@ linear-gradient(to right, rgba(250, 204, 21, 0.7), rgba(249, 115, 22, 0.7)),url(
               rgba(17, 24, 39, 0.85),
               rgba(31, 41, 55, 0.85)
             ),
-            url('images/hpr_group2.jpg')
+            url('images/hpr_group1.jpg')
           `,
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -342,7 +342,7 @@ linear-gradient(to right, rgba(250, 204, 21, 0.7), rgba(249, 115, 22, 0.7)),url(
           </div>
           
             <div className="mt-10">
-              <img className='w-full' src='images/board_structure.png'/>
+              <img className='w-full' src='/images/board_structure.png'/>
             </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* {[
@@ -449,7 +449,7 @@ linear-gradient(to right, rgba(250, 204, 21, 0.7), rgba(249, 115, 22, 0.7)),url(
       {/* Footer */}
       <div className="bg-white backdrop-blur-sm py-8">
         <div className="max-w-6xl mx-auto px-6 text-center items-center grid md:grid-cols-3">
-         <img className='w-25 md:mx-0 mx-auto md:mb-0 mb-5' src='images/hpr_logo.png'/>
+         <img className='w-25 md:mx-0 mx-auto md:mb-0 mb-5' src='/images/hpr_logo.png'/>
           <div className="text-black text-sm">
             <p>NPWP : 1000 0000 0204 4156</p>
             <p>SK Kemenkumham : AHU-0035054.AH.01.01.TAHUN 2025</p>
